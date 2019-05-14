@@ -2,7 +2,17 @@
 const navigationItems = document.querySelectorAll('.nav-link');
 const navContainer = document.querySelector('nav');
 const mainNavigationContainer = document.querySelector('.nav-container');
+const body = document.querySelector('body');
 
+// image selectors
+const busImage = document.querySelector('.bus-image');
+const adventureimage = document.querySelector('.adventure-image');
+const funImage = document.querySelector('.fun-image');
+const destinationImage = document.querySelector('.destination-image');
+
+
+
+// Code to assist with using stopPropagation()
 navContainer.addEventListener('click', (e) => {
     e.stopPropagation();
     console.log('you are in the header');
