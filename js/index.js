@@ -61,6 +61,13 @@ paragraph.forEach(item => {
     });
 });
 
+// add a doubleclick event to all images
+paragraph.forEach(item => {
+    item.addEventListener('dblclick', () => {
+        TweenMax.from(item, 1, {scale:2, ease: Elastic.easeInOut});
+    });
+});
+
 // Code to assist with using stopPropagation()
 navContainer.addEventListener('click', (e) => {
     e.stopPropagation();
