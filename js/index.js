@@ -20,8 +20,8 @@ window.addEventListener('load', () => {
     timeline.from(adventureimage, .5, {scale: 0});
     timeline.from(funImage, .2, {scale: 0});
     timeline.from(destinationImage, .2, {scale: 0});
-    timeline.from(logoHeader, .5, {x: -200, scale: 0, ease: Elastic.easeIn});
-    timeline.from(navContainer, .5, {x: 200, scale: 0, ease: Elastic.easeIn});
+    timeline.from(logoHeader, .5, {x: -200, scale: 0, ease: Elastic.easeInOut});
+    timeline.from(navContainer, .5, {x: 200, scale: 0, ease: Elastic.easeInOut});
 });
 
 
