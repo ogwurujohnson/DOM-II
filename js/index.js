@@ -72,6 +72,11 @@ paragraph.forEach(item => {
 // add a keydown event to change the color of our site
 window.addEventListener('keydown', () => {
     body.style.backgroundColor = 'teal';
+});
+
+//  add the scroll event to reduce the font size of elements
+window.addEventListener('scroll', () => {
+    console.log('scrolling!!!');
 })
 
 // Code to assist with using stopPropagation()
