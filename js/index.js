@@ -4,6 +4,7 @@ const navContainer = document.querySelector('nav');
 const mainNavigationContainer = document.querySelector('.nav-container');
 const imageContents = document.querySelector('.img-content');
 const btn = document.querySelectorAll('.btn');
+const paragraph = document.querySelectorAll('p');
 
 
 
@@ -45,7 +46,21 @@ btn.forEach(item => {
     });
 });
 
+// add a copy event to all paragraphs
+paragraph.forEach(item => {
+    item.addEventListener('copy', () => {
         alert(`You copied the text below:
+        ${item.textContent}`);
+    })
+});
+
+// add a cut event to all paragraphs
+paragraph.forEach(item => {
+    item.addEventListener('cut', () => {
+        TweenMax.to(item, 1, {opacity:0});
+    });
+});
+
 // Code to assist with using stopPropagation()
 navContainer.addEventListener('click', (e) => {
     e.stopPropagation();
