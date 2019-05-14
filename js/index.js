@@ -45,6 +45,7 @@ btn.forEach(item => {
     });
 });
 
+        alert(`You copied the text below:
 // Code to assist with using stopPropagation()
 navContainer.addEventListener('click', (e) => {
     e.stopPropagation();
