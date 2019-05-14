@@ -2,7 +2,7 @@
 const navigationItems = document.querySelectorAll('.nav-link');
 const navContainer = document.querySelector('nav');
 const mainNavigationContainer = document.querySelector('.nav-container');
-
+const imageContents = document.querySelector('.img-content');
 
 // image selectors
 const busImage = document.querySelector('.bus-image');
@@ -30,6 +30,11 @@ logoHeader.addEventListener('mouseover', (e) => {
     TweenMax.from(logoHeader, .5, {opacity: 0});
 });
 
+// add a drag/drop event on the image contents
+imageContents.addEventListener('drag', () => {
+    TweenMax.to(imageContents, 1, { x:-100 , opacity:0 , ease:Elastic.easeInOut  });
+});
+
 // Code to assist with using stopPropagation()
 navContainer.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -47,3 +52,5 @@ navigationItems.forEach((item) => {
         console.log('you are in an individual nav-link');
     });
 }, {capture: true});
+
+
