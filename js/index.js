@@ -13,7 +13,7 @@ const destinationImage = document.querySelector('.destination-image');
 // navigation selectors
 const logoHeader = document.querySelector('.logo-heading');
 
-
+// add a load event to our application
 window.addEventListener('load', () => {
     let timeline = new TimelineMax();
     timeline.from(busImage, .5, {scale: 0});
@@ -24,6 +24,11 @@ window.addEventListener('load', () => {
     timeline.from(navContainer, .5, {x: 200, scale: 0, ease: Elastic.easeInOut});
 });
 
+
+// add a mouse over event on the logoheader and the bus-image
+logoHeader.addEventListener('mouseover', (e) => {
+    TweenMax.from(logoHeader, .5, {opacity: 0});
+});
 
 // Code to assist with using stopPropagation()
 navContainer.addEventListener('click', (e) => {
