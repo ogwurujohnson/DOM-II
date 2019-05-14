@@ -20,6 +20,7 @@ const logoHeader = document.querySelector('.logo-heading');
 
 // add a load event to our application
 window.addEventListener('load', () => {
+    // using GSAP
     let timeline = new TimelineMax();
     timeline.from(busImage, .5, {scale: 0});
     timeline.from(adventureimage, .5, {scale: 0});
