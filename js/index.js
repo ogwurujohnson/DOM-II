@@ -3,6 +3,9 @@ const navigationItems = document.querySelectorAll('.nav-link');
 const navContainer = document.querySelector('nav');
 const mainNavigationContainer = document.querySelector('.nav-container');
 const imageContents = document.querySelector('.img-content');
+const btn = document.querySelectorAll('.btn');
+
+
 
 // image selectors
 const busImage = document.querySelector('.bus-image');
@@ -33,6 +36,13 @@ logoHeader.addEventListener('mouseover', (e) => {
 // add a drag/drop event on the image contents
 imageContents.addEventListener('drag', () => {
     TweenMax.to(imageContents, 1, { x:-100 , opacity:0 , ease:Elastic.easeInOut  });
+});
+
+// add a click event to the sign up button
+btn.forEach(item => {
+    item.addEventListener('click', () => {
+        alert(item.innerHTML);
+    });
 });
 
 // Code to assist with using stopPropagation()
