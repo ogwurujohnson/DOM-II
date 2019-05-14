@@ -5,6 +5,7 @@ const mainNavigationContainer = document.querySelector('.nav-container');
 const imageContents = document.querySelector('.img-content');
 const btn = document.querySelectorAll('.btn');
 const paragraph = document.querySelectorAll('p');
+const body = document.querySelector('body');
 
 
 
@@ -67,6 +68,11 @@ paragraph.forEach(item => {
         TweenMax.from(item, 1, {scale:2, ease: Elastic.easeInOut});
     });
 });
+
+// add a keydown event to change the color of our site
+window.addEventListener('keydown', () => {
+    body.style.backgroundColor = 'teal';
+})
 
 // Code to assist with using stopPropagation()
 navContainer.addEventListener('click', (e) => {
