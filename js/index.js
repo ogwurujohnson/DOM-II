@@ -77,6 +77,12 @@ window.addEventListener('keydown', () => {
 //  add the scroll event to reduce the font size of elements
 window.addEventListener('scroll', () => {
     console.log('scrolling!!!');
+});
+
+// add resize event
+window.addEventListener('resize', (e) => {
+    alert(`height: ${e.currentTarget.innerHeight}
+            width: ${e.currentTarget.innerWidth}`);
 })
 
 // Code to assist with using stopPropagation()
